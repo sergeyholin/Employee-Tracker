@@ -15,13 +15,13 @@ VALUES ("Senior Front-End Developer", 150000, 1),
        ("Marketing Associate", 75000, 4);
     
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("John", "Smith", 1,1 ),
+VALUES ("John", "Smith", 1, null ),
        ("Kevin", "Moa", 2, 1),
        ("Bob", "Kenshi", 2, 1),
-       ("Xi", "Lee", 3, 1),
-       ("Jacky", "Kang", 4, 1),
-       ("Robert", "Kenly", 4, 1),
-       ("Jessica", "Anderson", 5, 1),
-       ("Stephanie", "Robertson", 6, 1),
-       ("Sophia", "Goldberg", 7, 1),
-       ("Kim", "Johnson", 8, 1);
+       ("Xi", "Lee", 3, null),
+       ("Jacky", "Kang", 4, 4),
+       ("Robert", "Kenly", 4, 4),
+       ("Jessica", "Anderson", 5, null),
+       ("Stephanie", "Robertson", 6, 7),
+       ("Sophia", "Goldberg", 7, null),
+       ("Kim", "Johnson", 8, 9);
