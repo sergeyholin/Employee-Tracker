@@ -22,7 +22,7 @@ CREATE TABLE employee (
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
     role_id INT NOT NULL,
-    manager_id INT,
+    manager_id INT NULL,
     FOREIGN KEY(manager_id)
     REFERENCES employee(id),
     FOREIGN KEY (role_id)
@@ -46,11 +46,11 @@ INNER JOIN employee ON company_role.id=employee.id
 -- JOIN Table1 ON Table3.id = Table1.id
 INNER JOIN department ON employee.id = department.id;
 -- *********************************************************************************************
-USE unicornCo_db;
-SELECT department.department_name AS "Department", department.id AS "Dept. ID"
-FROM department;
+SELECT employee.id, employee.first_name, employee.last_name, company_role.id AS "Role ID"
+FROM employee, company_role, department WHERE department.id = company_role.department_id AND company_role.id = employee.role_id;
 
-
+SELECT employee.first_name, employee.last_name
+FROM employee
 
 
 
